@@ -5,7 +5,20 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function App() {
   return (
     <div className="app">
-      <h2>Starbucks Clone☕🍵🧉</h2>
+      
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <h2>Starbucks Clone☕🍵🧉</h2>
+            {/* Header */}
+
+            {/* HomeScreen */}
+
+            {/* Fade */}
+              {/* Footer */}
+          </Route>
+        </Switch>
+    </Router>
     </div>
   );
 }
