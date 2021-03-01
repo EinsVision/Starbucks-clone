@@ -13,7 +13,6 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <h2>Starbucks Clone☕🍵🧉</h2>
             <Header />
 
             <HomeScreen />

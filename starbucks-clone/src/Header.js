@@ -1,6 +1,7 @@
 import React from 'react';
 import './Header.css';
 import { Link } from "react-router-dom";
+import { Example } from './Example';
 
 function Header() {
   return (
@@ -17,13 +18,22 @@ function Header() {
           Menu
         </Link>
 
+        <Link>
+          Rewards
+        </Link>
+
+        <Link>
+          Gift Cards
+        </Link>
+
       </div>
 
       <div className="header__right">
-
+        <Example />
       </div>
     </div>
   )
 }
 
 export default Header;
+
