@@ -121,3 +121,47 @@
     max-width: 380px;
   }
 }
+
+@media (max-width: 768px) {
+  .homeScreen__bottomRight > img{
+    max-width: 380px;
+  }
+  .homeScreen__bottomLeft {
+    max-width: 300px
+  }
+  .homeScreen__botton{
+    padding-left: 20px;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .homeScreen__botton{
+    flex-direction: column;
+    padding-right: 20px;
+  }
+  .homeScreen__bottomLeft{
+    order: 2;
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 375px) {
+  .homeScreen__bottomRight > img{
+    max-width: 340px;
+  }
+  .homeScreen__botton{
+    align-items: flex-start;
+  }
+}
+
+.homeScreen__discover{
+  display: flex;
+  gap: 25px;
+}
+
+@media (max-width: 768px) {
+  .homeScreen__discover{
+    flex-direction: column;
+  }
+}

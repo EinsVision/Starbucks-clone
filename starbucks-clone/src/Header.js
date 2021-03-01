@@ -22,15 +22,15 @@ function Header({menuPage}) {
         </Link>
 
         <Link className='header__link' to='/menu'>
-          Menu
+          MENU
         </Link>
 
         <Link className='header__link'>
-          Rewards
+          REWARDS
         </Link>
 
         <Link className='header__link'>
-          Gift Cards
+          GIFT CARDS
         </Link>
 
       </div>
