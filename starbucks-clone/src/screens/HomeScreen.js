@@ -17,18 +17,18 @@ function HomeScreen() {
       </Fade>
 
       <Fade>
-        <div className="homeScreen__button">
-          <div className="homeScreen__buttonLeft">
+        <div className="homeScreen__botton">
+          <div className="homeScreen__bottonLeft">
             <h4>Investing in our communities</h4>
             <p>
               The Starbucks Foundation awarded grants to over 400 noprofits 
               serving communities of color. Recipients were nominated by 
               Starbucks partners (employees).
             </p>
-            <button>Learn more</button>
+            <button className='homeScreen__bottonLeftButton'>Learn more</button>
           </div>
 
-          <div className="homeScreen__buttonRight">
+          <div className="homeScreen__bottonRight">
             <img 
               src="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-69046.jpg" 
               alt=""
