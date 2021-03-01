@@ -1,0 +1,14 @@
+.findStore{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: black;
+  opacity: 0.87;
+  margin-right: 20px;
+}
+
+.findStore:hover{
+  color: #008248;
+  transition: all 200ms;
+}
