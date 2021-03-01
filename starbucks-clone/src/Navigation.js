@@ -3,6 +3,11 @@ import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
 import MenuLink from './MenuLink';
 import FindStore from './FindStore';
+import { useSelector } from 'react-redux';
+import { selectUser } from './features/userSlice';
+import SignInButton from './SignInButton';
+import SignUpButton from './SignUpButton';
+import LogoutButton from './LogoutButton';
 
 const variants = {
   open: {
@@ -33,6 +38,7 @@ const variants2 = {
 
 export const Navigation = ({toggle}) => {
   const [showMenuCategories, setShowMeunCategories] = React.useState(false);
+  const user = useSelector(selectUser);
   return (
     <>
     {showMenuCategories ? (
@@ -94,7 +100,14 @@ export const Navigation = ({toggle}) => {
         />
         <motion.hr variants={variants2}/>
         <motion.div className='navigation__buttons' variants={variants2}>
-
+        {!user ? (
+          <>
+            <SignInButton />
+            <SignUpButton />
+          </>
+        ): (
+          <LogoutButton />
+        )}
         </motion.div>
 
         <motion.div variants={variants2}>
