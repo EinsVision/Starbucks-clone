@@ -25,11 +25,11 @@ function Header({menuPage}) {
           Menu
         </Link>
 
-        <Link>
+        <Link className='header__link'>
           Rewards
         </Link>
 
-        <Link>
+        <Link className='header__link'>
           Gift Cards
         </Link>
 
