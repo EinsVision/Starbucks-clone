@@ -42,8 +42,24 @@ function HomeScreen() {
       <div className="homeScreen__featured">
         <Fade>
           <Featured
+              title='STARBUCKS RESERVE® COFFEE'
+              info='Now for a limited time, you can explore these two incredible offerings: Ethiopia Yirgacheffe® Chelelektu and Guatemala Huehuetenango.'
+              link='Reward Cards'
+              path=''
+              order='2'
+              image='https://globalassets.starbucks.com/assets/24e0ef1330ce468ba949ae92eef35222.png' 
+              background='#f0ebe0'
+              color='#1e3932'
+              className='featured__hoverLight'
+            />
+        </Fade>
+
+        <Fade>
+          <Featured
             title='OH SO LUSH'
             info='Enjoy velvety-smooth Nitro Cold Brew your way—black or with house-made Sweet Cream for under 75 calories in a grande.'
+            link='Explore the Cold Brew drinks'
+            path=''
             image='https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-68963.png' 
             background='#f0ebe0'
             color='#1e3932'
@@ -55,7 +71,10 @@ function HomeScreen() {
           <Featured
             title='UP AND AT ’EM'
             info='Conquer it all with a Bacon, Sausage & Egg Wrap or Bacon, Gouda & Egg Sandwich, featuring cage-free eggs.'
+            link='Trt the new menu'
+            paht=''
             image='https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-68965.png' 
+            order='2'
             background='#f0ebe0'
             color='#1e3932'
             className='featured__hoverLight'
