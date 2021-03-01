@@ -7,6 +7,8 @@ import CloseIcon from '@material-ui/icons/Close';
 import ReportProblemIcon from '@material-ui/icons/ReportProblem';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
+import FormSubmit from '../FormSubmit';
+import FooterSecondary from '../FooterSecondary';
 
 function LoginScreen() {
 
@@ -58,7 +60,7 @@ function LoginScreen() {
             <TextField
               label='Standard' 
               name='password' 
-              type='password' 
+              type={passwordShown ? 'text' : 'password'}
               InputLabelProps={{ style: { color: 'rgba(0,0,0,0.56)'}}} 
               InputProps={{style: {fontWeight: '800' }}}
               className='loginScreen__input'
@@ -87,11 +89,26 @@ function LoginScreen() {
               </div>
             )}
           </div>
+          <FormSubmit name='Sign in' type='submit'/>
         </form>
         <div className="loginScreen__resetLinks">
           <Link>Forget your username?</Link>
           <Link>Forget your password?</Link>
         </div>
+
+        <div className="loginScreen__rewards">
+          <h4>JOIN STARBUCKS® REWARDS</h4>
+        </div>
+        <div className="loginScreen__joinNow">
+          <div className="loginScreen__joinNowContainer">
+            <Link to='/account/create'>
+              Join now
+            </Link>
+            <h4>Create an accout and bring on the Rewards!</h4>
+            <p>Join Starbucks® Rewards to earn free food and drinks, get free refills, pay and oreder with your phone, and more.</p>
+          </div>
+        </div>
+        <FooterSecondary paddingLeft={30} flexDirection='column'/>
       </div>
     </div>
   )
