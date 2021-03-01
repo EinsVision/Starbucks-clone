@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Fade } from 'react-awesome-reveal';
 import HomeScreen from './screens/HomeScreen';
 import Header from './Header';
-import Footer from './Footer';
+import { Footer } from './Footer';
 
 function App() {
   return (
