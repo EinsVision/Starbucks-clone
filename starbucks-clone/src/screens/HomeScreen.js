@@ -3,7 +3,6 @@ import { Fade } from 'react-awesome-reveal';
 import { Link } from 'react-router-dom';
 import Featured from '../Featured';
 import Heading from '../Heading';
-import Info from '../Info';
 import './HomeScreen.css';
 
 
@@ -86,26 +85,34 @@ function HomeScreen() {
         <Heading heading='MORE TO DISCOVER' />
       </Fade>
 
-      <Fade>
-        <div className="homeScreen__discover">
-          <Info
-            title='STARBUCKS RESERVE® COFFEE'
-            info='Now for a limited time, you can explore these two incredible offerings: Ethiopia Yirgacheffe® Chelelektu and Guatemala Huehuetenango.'
-            image='https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-68960.png' 
-            background='#f0ebe0'
-            color='#1e3932'
-            className='featured__hoverLight'
-          />
-          <Info
+      <div className="homeScreen__featured">
+        <Fade>
+          <Featured
             title='Earning 4,500 Bonus Stars is Super Starifying'
             info='$0 intro annual fee for your first year with the Starbucks® Rewards Visa® Card. Plus your Stars won’t expire—an exclusive Starbucks benefit for cardmembers. Now that’s Super Starifying.**'
             image='https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-63859.jpg' 
-            background='#f0ebe0'
+            background='#F2F0EB'
             color='#1e3932'
+            paht=''
+            link='Order now'
             className='featured__hoverLight'
           />
-        </div>
-      </Fade>
+        </Fade>
+
+        <Fade>
+          <Featured
+            title='STARBUCKS RESERVE® COFFEE'
+            info='Now for a limited time, you can explore these two incredible offerings: Ethiopia Yirgacheffe® Chelelektu and Guatemala Huehuetenango.'
+            image='https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-68587.jpg' 
+            background='#d4e9e4'
+            color='#1e3932'
+            paht=''
+            order='2'
+            link='See pickup options'
+            className='featured__hoverLight'
+          />
+        </Fade>
+      </div>
     </div>
   )
 }
