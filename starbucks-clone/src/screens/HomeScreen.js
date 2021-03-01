@@ -19,11 +19,9 @@ function HomeScreen() {
       <Fade>
         <div className="homeScreen__botton">
           <div className="homeScreen__bottonLeft">
-            <h4>Investing in our communities</h4>
+            <h4>Get more of what you love, for free</h4>
             <p>
-              The Starbucks Foundation awarded grants to over 400 noprofits 
-              serving communities of color. Recipients were nominated by 
-              Starbucks partners (employees).
+              With Starbucks® Rewards, say hello to easy ordering, endless choice—and yes, free coffee.*
             </p>
             <button className='homeScreen__bottonLeftButton'>Learn more</button>
           </div>
