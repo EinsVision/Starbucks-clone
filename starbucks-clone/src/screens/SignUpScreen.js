@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import FooterSecondary from '../FooterSecondary';
+import SignupForm from '../SignupForm';
 import './SignUpScreen.css';
 
 function SignUpScreen() {
@@ -19,7 +20,7 @@ function SignUpScreen() {
         <h4>STARBUCKS REWARDS</h4>
         <p>Join Starbucks Rewards to earn Stars for free food and drinks, any way you pay. Get access to mobile ordering, a birthday Reward, and <Link>more.</Link></p>
       </div>
-      {/* <SignupForm /> */}
+      <SignupForm />
       <FooterSecondary alignItems='center' flexDirection='column'/>
     </div>
   )
