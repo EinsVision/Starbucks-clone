@@ -2,14 +2,16 @@ import React from 'react';
 import './MenuScreen.css';
 import menuList from '../menuList.json';
 import MenuItem from '../MenuItem';
+import MenuHeader from '../MenuHeader';
+import MenuList from '../MenuList';
 
 function MenuScreen() {
   return (
     <div className='menuScreen'>
-      {/* <MenuHeader /> */}
+      <MenuHeader />
       <div className="menuScreen__container">
         <div className="menuScreen__left">
-
+          <MenuList />
         </div>
 
         <div className="menuScreen__right">
