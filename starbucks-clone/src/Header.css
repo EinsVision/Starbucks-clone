@@ -38,8 +38,8 @@
   font-weight: 800;
   letter-spacing: 1.4px;
   opacity: 0.87;
-  text-decoration: uppercase;
-  font-size: 15px;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 .header__left > a:hover{
