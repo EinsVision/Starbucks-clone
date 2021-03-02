@@ -7,15 +7,38 @@ import ReportProblemIcon from '@material-ui/icons/ReportProblem';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import FormSubmit from './FormSubmit';
+import { auth } from './firebase';
+import { useDispatch } from 'react-redux';
+import { login } from './features/userSlice';
+import { useHistory } from 'react-router-dom';
 
 function SignupForm() {
   const { register, handleSubmit, errors } = useForm();
   const [passwordShown, setPasswordShown] = useState(false);
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  const onSubmit = ({fName, lName, email, password }) => {
+    auth.createUserWithEmailAndPassword(email, password)
+    .then((userAuth) => {
+      userAuth.user.updateProfile({
+        displayName: fName
+      }).then(()=>{
+        dispatch(login({
+          email: userAuth.user.email,
+          uid: userAuth.user.uid,
+          displayName: fName,
+        }));
+        history.replace('/menu');
+      })
+    })
+    .then((error) => alert(error.message));
+  }
   return (
     <div className='signupForm'>
       <div className="signupForm__container">
         <form 
-          // onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit(onSubmit)}
           className='signupForm__form'
         >
           <h4 className='signupForm__section'>Personal Information</h4>
