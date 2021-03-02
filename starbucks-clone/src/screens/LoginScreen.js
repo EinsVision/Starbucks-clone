@@ -36,7 +36,7 @@ function LoginScreen() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="loginScreen__inputContainer">
             <TextField
-              label='Standard' 
+              label='E-mail' 
               name='email' 
               type='email' 
               InputLabelProps={{ style: { color: 'rgba(0,0,0,0.56)'}}} 
@@ -58,7 +58,7 @@ function LoginScreen() {
 
           <div className="loginScreen__inputContainer">
             <TextField
-              label='Standard' 
+              label='Password' 
               name='password' 
               type={passwordShown ? 'text' : 'password'}
               InputLabelProps={{ style: { color: 'rgba(0,0,0,0.56)'}}} 
