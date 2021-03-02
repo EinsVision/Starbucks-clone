@@ -1,10 +1,10 @@
 import React from 'react';
 import './FormSubmit.css';
 
-function FormSubmit() {
+function FormSubmit({ name, type, onClick}) {
   return (
-    <div>
-      
+    <div className='formSubmit' type={type}>
+      {name}
     </div>
   )
 }
