@@ -19,10 +19,11 @@ function SignupForm() {
   const history = useHistory();
 
   const onSubmit = ({fName, lName, email, password }) => {
+    console.log('onSubmit on SignupForm.js');
     auth.createUserWithEmailAndPassword(email, password)
     .then((userAuth) => {
       userAuth.user.updateProfile({
-        displayName: fName
+        displayName: fName,
       }).then(()=>{
         dispatch(login({
           email: userAuth.user.email,
@@ -32,7 +33,7 @@ function SignupForm() {
         history.replace('/menu');
       })
     })
-    .then((error) => alert(error.message));
+    .catch((error) => alert(error.message));
   }
   return (
     <div className='signupForm'>
@@ -47,7 +48,7 @@ function SignupForm() {
               label='First name' 
               name='fName' 
               type='text' 
-              InputLabelProps={{ style: { color: 'rgba(0,0,0,0.56)'}}} 
+              InputLabelProps={{ style: { color: 'rgba(0,0,0,0.56)'}, }} 
               InputProps={{style: {fontWeight: '800' }}}
               className='signupForm__input'
               inputRef={register({ required: true })}
