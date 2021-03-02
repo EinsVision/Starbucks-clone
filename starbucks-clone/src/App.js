@@ -6,15 +6,30 @@ import HomeScreen from './screens/HomeScreen';
 import Header from './Header';
 import { Footer } from './Footer';
 import LoginScreen from './screens/LoginScreen';
-import { useSelector } from 'react-redux';
-import { selectUser } from './features/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { login, logout, selectUser } from './features/userSlice';
+import { auth } from './firebase';
+import SignUpScreen from './screens/SignUpScreen';
 
 function App() {
   const user = useSelector(selectUser);
+  const dispatch = useDispatch();
 
   useEffect( () => {
-    
-  }, []);
+    auth.onAuthStateChanged(( userAuth ) => {
+      if(userAuth){
+        // user is signed in 
+        dispatch(login({
+          email: userAuth.email,
+          uid: userAuth.uid,
+          displayName: userAuth.displayName
+        }));
+      } else{
+        // user is signed out
+        dispatch(logout());
+      }
+    })
+  }, [dispatch]);
 
   return (
     <div className="app">
@@ -32,6 +47,10 @@ function App() {
           
           <Route exact path='/account/signin'>
             {user ? <Redirect to='/menu' /> : <LoginScreen />}
+          </Route>
+
+          <Route exact path='/account/create'>
+            {user ? <Redirect to='/menu' /> : <SignUpScreen />}
           </Route>
         </Switch>
     </Router>
