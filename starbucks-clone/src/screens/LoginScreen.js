@@ -9,13 +9,27 @@ import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import FormSubmit from '../FormSubmit';
 import FooterSecondary from '../FooterSecondary';
+import { auth } from '../firebase';
+import { useDispatch } from 'react-redux';
+import { login } from '../features/userSlice';
 
 function LoginScreen() {
 
-  const { register, handleSubmit, watch, errors } = useForm();
+  const { register, handleSubmit, errors } = useForm();
   const [passwordShown, setPasswordShown] = useState(false);
-  const onSubmit = ({ email, password }) => {
+  const dispatch = useDispatch();
 
+  // firebase auth
+  const onSubmit = ({ email, password }) => {
+    auth.signInWithEmailAndPassword(email, password)
+    .then((userAuth) => {
+      dispatch(login({
+        email: userAuth.user.email,
+        uid: userAuth.user.uid,
+        displayName: userAuth.user.displayName
+      }))
+    })
+    .catch((error) => alert(error));
   };
   
   return (

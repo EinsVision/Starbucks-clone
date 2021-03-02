@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { Fade } from 'react-awesome-reveal';
@@ -11,6 +11,11 @@ import { selectUser } from './features/userSlice';
 
 function App() {
   const user = useSelector(selectUser);
+
+  useEffect( () => {
+    
+  }, []);
+
   return (
     <div className="app">
       
