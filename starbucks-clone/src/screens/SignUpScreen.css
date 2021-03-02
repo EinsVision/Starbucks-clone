@@ -21,3 +21,59 @@
   padding-right: 40px;
   margin-top: 20px;
 }
+
+.singUpScreen__heading{
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.signUpScreen__rewards{
+  text-align: center;
+}
+
+.signUpScreen__rewards >h4{
+  color: rgba(0, 0, 0, 0.56);
+  letter-spacing: 1.4;
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.signUpScreen__rewards > p {
+  color: rgba(0, 0, 0, 0.56);
+  line-height: 1.5;
+  font-weight: 600;
+  max-width: 500px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.signUpScreen__rewards > p > a{
+  color: rgba(0, 0, 0, 0.56);
+  text-decoration: underline;
+}
+
+.signUpScreen__rewards > p > a:hover{
+  text-decoration: none;
+}
+
+@media (max-width: 425px) {
+  .signUpScreen {
+    gap: 30px;
+  }
+  .signUpScreen__heading {
+    margin-right: auto;
+    padding: 0 20px;
+    font-size: 24px;
+  }
+
+  .signUpScreen__rewards > h4 {
+    display: none;
+  }
+  .signUpScreen__rewards {
+    text-align: left;
+    padding: 0 20px;
+  }
+  .signUpScreen__rewards > p {
+    font-size: 13px;
+  }
+}
