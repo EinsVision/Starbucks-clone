@@ -1,0 +1,23 @@
+.signUpScreen{
+  display: grid;
+  place-items: center;
+  gap: 40px;
+}
+
+.signUpScreen__header{
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.06),
+    0 0 2px rgba(0, 0, 0, 0.07);
+  width: 100%;
+  height: 101px;
+  display: flex;
+  align-items: center;
+}
+
+.signUpScreen__header > a > img{
+  object-fit: contain;
+  height: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 20px;
+}
